@@ -79,23 +79,20 @@ public class Concesionaria {
     }
     
     public String toString (){
-        for (int i = 0; i < listaVentas.size(); i ++){
-            listaVentas.get(i).establecerPrecioFinal();
-        }
-        
-        String cadenaventas = "";
-        cadenaventas = cadenaventas+ 
-                for(int i ; listaVentas.size(); i++){
-                    
-                }
-        
         String cadena = String.format("Nombre Concesionaria: %s\n"
-                + "Lista de Ventas: %s\n "
+   
                 + "Vehiculo mas Barato: %s\n"
                 + "Vehiculo mas Caro: %s \n"
-                + "Ventas Totales: %.2f\n",
+                + "Lista de Ventas: "
+                ,nombre,
+                vehiculoMasBarato,vehiculoMasCaro);
                 
+        for (int i = 0; i < listaVentas.size(); i++) {
+            cadena = String.format("%s\n%s\n", cadena,
+                     listaVentas.get(i));
+        }
         
+        cadena = String.format("%sVentas Totales: %.2f\n", cadena,ventasTotales);
         return cadena;
     }
     

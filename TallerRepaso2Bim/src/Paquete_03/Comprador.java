@@ -11,6 +11,11 @@ package Paquete_03;
 public class Comprador {
     private String nombres;
     private String cedula;
+    
+    public Comprador(String n, String c){
+        nombres = n;
+        cedula = c;
+    }
 
     public String obtenerNombres() {
         return nombres;

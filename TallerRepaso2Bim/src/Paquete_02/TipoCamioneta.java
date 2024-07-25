@@ -49,7 +49,7 @@ public class TipoCamioneta extends TipoVehiculo {
 
     @Override
     public void establecerPrecioFinal() {
-        precioFinal = precioFinal + valorImportacion + seguroMantenimiento;
+        precioFinal = precioBase + valorImportacion + seguroMantenimiento;
     }
 
     public String toString() {
